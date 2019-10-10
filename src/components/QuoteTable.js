@@ -3,7 +3,7 @@ import ReactTable from 'react-table'
 import {connect} from 'react-redux'
 import 'react-table/react-table.css'
 
-export class QuoteTable extends React.Component {
+class QuoteTable extends React.Component {
   render() {
     let data = this.props.quotes
     let columns = [{

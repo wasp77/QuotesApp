@@ -9,7 +9,8 @@ const initialState = {
   loanSize: 0,
   creditScore: 0,
   propertyType: 'SingleFamily',
-  occupancy: 'Primary'
+  occupancy: 'Primary',
+  valid: true
 }
 
 export default function selectionReducer(state = initialState, action) {
