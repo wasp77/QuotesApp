@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import CreditScore from './components/CreditScore'
 import LoanSize from './components/LoanSize'
 import {Occupancy} from './components/Occupancy'
-import {PropertyType} from './components/PropertyType'
+import PropertyType from './components/PropertyType'
 import {QuoteTable} from './components/QuoteTable'
 import {RateButton} from './components/RateButton'
 
