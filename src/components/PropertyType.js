@@ -5,7 +5,7 @@ import {setPropertyType} from '../actions/selectionActions'
 const options = ['SingleFamily', 'Condo', 'Townhouse', 'MultiFamily']
 const textFriendly = ['Single Family', 'Condo', 'Townhouse', 'Multi Family']
 
-export class PropertyType extends React.Component {
+class PropertyType extends React.Component {
   constructor(props) {
     super(props)
     this.handleChange = this.handleChange.bind(this)
