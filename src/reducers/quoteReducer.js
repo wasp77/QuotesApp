@@ -1,4 +1,7 @@
-
+import {
+  FETCH_QUOTES_SUCCESS,
+  FETCH_QUOTES_FAILURE
+} from '../actions/quoteActions'
 
 const initialState = {
   quotesList: [],
