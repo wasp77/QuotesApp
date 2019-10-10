@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {CreditScore} from './components/CreditScore'
+import CreditScore from './components/CreditScore'
 import {LoanSize} from './components/LoanSize'
 import {Occupancy} from './components/Occupancy'
 import {PropertyType} from './components/PropertyType'
