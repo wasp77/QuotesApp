@@ -1,22 +1,15 @@
+import {
+  SET_LOAN_SIZE,
+  SET_CREDIT_SCORE,
+  SET_PROPERTY_TYPE,
+  SET_OCCUPANCY
+} from '../actions/selectionActions'
 
 const initialState = {
   loanSize: 0,
   creditScore: 0,
   propertyType: 'SingleFamily',
   occupancy: 'Primary'
-}
-
-const propertyMap = {
-  'Single Family': 'SingleFamily',
-  'Condo': 'Condo',
-  'Townhouse': 'Townhouse',
-  'Multi Family': 'MultiFamily'
-}
-
-const occupancyMap = {
-  'Primary Residence': 'Primary',
-  'Secondary Residence': 'Secondary',
-  'Investment Residence': 'Investment'
 }
 
 export default function selectionReducer(state = initialStatem, action) {
@@ -40,16 +33,14 @@ export default function selectionReducer(state = initialStatem, action) {
         }
       }
     case SET_PROPERTY_TYPE:
-      let type = action.propertyType
       return {
         ...state,
-        propertyType: propertyMap.type
+        propertyType: action.propertyType
       }
     case SET_OCCUPANCY:
-      let type = action.occupancy
       return {
         ...state,
-        occupancy: occupancyMap.type
+        occupancy: action.occupancy
       }
     default:
       return state
