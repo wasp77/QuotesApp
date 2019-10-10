@@ -2,12 +2,12 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {setCreditScore} from '../actions/selectionActions'
 
-export class CreditScore extends React.Component {
+class CreditScore extends React.Component {
   constructor(props) {
     super(props)
     this.handleChange = this.handleChange.bind(this)
   }
-  
+
   handleChange(e) {
     this.props.dispatch(setCreditScore(e.target.value))
   }
@@ -21,7 +21,6 @@ export class CreditScore extends React.Component {
     )
   }
 }
-
 
 const mapStateToProps = state => ({
   creditScore: state.creditScore
