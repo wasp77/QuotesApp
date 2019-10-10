@@ -30,7 +30,7 @@ class Occupancy extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  occupancy: state.occupancy
+  occupancy: state.selection.occupancy
 })
 
 export default connect(mapStateToProps)(Occupancy)

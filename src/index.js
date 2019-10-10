@@ -4,11 +4,11 @@ import {createStore, applyMiddleware} from 'redux'
 import {Provider} from 'react-redux'
 import thunk from 'redux-thunk'
 import App from './App'
-import selectionReducer from './reducers/selectionReducer'
+import rootReducer from './reducers/rootReducer'
 
 
 const store = createStore(
-  selectionReducer,
+  rootReducer,
   applyMiddleware(thunk)
 )
 

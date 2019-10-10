@@ -31,7 +31,7 @@ class PropertyType extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  propertyType: state.propertyType
+  propertyType: state.selection.propertyType
 })
 
 export default connect(mapStateToProps)(PropertyType)

@@ -23,7 +23,7 @@ class CreditScore extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  creditScore: state.creditScore
+  creditScore: state.selection.creditScore
 })
 
 export default connect(mapStateToProps)(CreditScore)

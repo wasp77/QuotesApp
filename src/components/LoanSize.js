@@ -24,7 +24,7 @@ class LoanSize extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  loanSize: state.loanSize
+  loanSize: state.selection.loanSize
 })
 
 export default connect(mapStateToProps)(LoanSize)
