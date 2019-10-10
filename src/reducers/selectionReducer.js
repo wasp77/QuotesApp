@@ -12,7 +12,7 @@ const initialState = {
   occupancy: 'Primary'
 }
 
-export default function selectionReducer(state = initialStatem, action) {
+export default function selectionReducer(state = initialState, action) {
   switch (action.type) {
     case SET_LOAN_SIZE:
       if (isNaN(action.loanSize)) {

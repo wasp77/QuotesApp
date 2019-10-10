@@ -1,8 +1,16 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import {createStore} from 'redux'
+import {Provider} from 'react-redux'
+import App from './App'
+import selectionReducer from './reducers/selectionReducer'
+
+
+const store = createStore(selectionReducer)
 
 ReactDOM.render(
-  <App />,
+  (<Provider store={store}>
+    <App />
+  </Provider>),
   document.getElementById('root')
 );
