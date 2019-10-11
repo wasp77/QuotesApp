@@ -1,4 +1,9 @@
-import * as actions from '../../actions/selectionActions'
+import {
+  SET_LOAN_SIZE,
+  SET_CREDIT_SCORE,
+  SET_PROPERTY_TYPE,
+  SET_OCCUPANCY
+} from '../../actions/selectionActions'
 import reducer from '../selectionReducer'
 
 describe('selection reducer', () => {
@@ -12,12 +17,13 @@ describe('selection reducer', () => {
     })
   })
   it('should set loan size', () => {
-    expect(reducer({loanSize: 0,
+    expect(reducer({
+    loanSize: 0,
     creditScore: 0,
     propertyType: 'SingleFamily',
     occupancy: 'Primary',
     valid: true}, {
-      type: actions.SET_LOAN_SIZE,
+      type: SET_LOAN_SIZE,
       loanSize: 10000
     })).toEqual({
       loanSize: 10000,
@@ -28,12 +34,13 @@ describe('selection reducer', () => {
     })
   })
   it('should set credit score', () => {
-    expect(reducer({loanSize: 0,
+    expect(reducer({
+    loanSize: 0,
     creditScore: 0,
     propertyType: 'SingleFamily',
     occupancy: 'Primary',
     valid: true}, {
-      type: actions.SET_CREDIT_SCORE,
+      type: SET_CREDIT_SCORE,
       creditScore: 700
     })).toEqual({
       loanSize: 0,
@@ -44,12 +51,13 @@ describe('selection reducer', () => {
     })
   })
   it('should set property type', () => {
-    expect(reducer({loanSize: 0,
+    expect(reducer({
+    loanSize: 0,
     creditScore: 0,
     propertyType: 'SingleFamily',
     occupancy: 'Primary',
     valid: true}, {
-      type: actions.SET_PROPERTY_TYPE,
+      type: SET_PROPERTY_TYPE,
       propertyType: 'Condo'
     })).toEqual({
       loanSize: 0,
@@ -60,12 +68,13 @@ describe('selection reducer', () => {
     })
   })
   it('should set occupancy type', () => {
-    expect(reducer({loanSize: 0,
+    expect(reducer({
+    loanSize: 0,
     creditScore: 0,
     propertyType: 'SingleFamily',
     occupancy: 'Primary',
     valid: true}, {
-      type: actions.SET_OCCUPANCY,
+      type: SET_OCCUPANCY,
       occupancy: 'Secondary'
     })).toEqual({
       loanSize: 0,
