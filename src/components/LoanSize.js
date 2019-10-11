@@ -17,7 +17,7 @@ class LoanSize extends React.Component {
     return (
       <div>
         <label>Loan Size </label>
-        <input type="number" value={this.props.loanSize} onChange={this.handleChange} min="0.01" step="0.01" />
+        <input type="number" value={this.props.loanSize} onChange={this.handleChange} min="0.00" required/>
       </div>
     )
   }

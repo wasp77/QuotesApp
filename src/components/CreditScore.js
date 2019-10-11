@@ -16,7 +16,7 @@ class CreditScore extends React.Component {
     return (
       <div>
         <label>Credit Score </label>
-        <input type="number" value={this.props.creditScore} onChange={this.handleChange} min="250" max="900"/>
+        <input type="number" value={this.props.creditScore} onChange={this.handleChange} min="300" max="800" required/>
       </div>
     )
   }
