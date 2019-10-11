@@ -16,7 +16,7 @@ export const fetchQuotesFailure = error => ({
 export function fetchQuotes() {
   return function(dispatch, getState) {
     const state = getState()
-    axios({
+    return axios({
       method: 'get',
       url: 'https://ss6b2ke2ca.execute-api.us-east-1.amazonaws.com/Prod/quotes',
       headers: {'Authorization': 'RG-AUTH 5ec94be8-9e27-454e-95e4-c5c5eb54bf1e'},
