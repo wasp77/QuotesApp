@@ -11,7 +11,7 @@ class RateButton extends React.Component {
   handleClick() {
     this.props.dispatch(fetchQuotes())
   }
-
+  //remove the valid check 
   render() {
     return <button disabled={!this.props.valid} onClick={this.handleClick}>Quote Rates</button>
   }
