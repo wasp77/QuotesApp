@@ -16,19 +16,23 @@ class QuoteTable extends React.Component {
     },
     {
       Header: 'Rate',
-      accessor: 'interestRate'
+      accessor: 'interestRate',
+      Cell: props => <span>{props.value.toFixed(3) + "%"}</span>
     },
     {
       Header: 'Closing Costs',
-      accessor: 'closingCosts'
+      accessor: 'closingCosts',
+      Cell: props => <span>{"$" + props.value.toFixed(2)}</span>
     },
     {
       Header: 'Monthly Payment',
-      accessor: 'monthlyPayment'
+      accessor: 'monthlyPayment',
+      Cell: props => <span>{"$" + props.value.toFixed(2)}</span>
     },
     {
       Header: 'APR',
-      accessor: 'apr'
+      accessor: 'apr',
+      Cell: props => <span>{props.value.toFixed(3) + "%"}</span>
     }]
     return <ReactTable data={data} columns={columns} />
   }
