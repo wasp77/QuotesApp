@@ -4,7 +4,7 @@ import {setOccupancy} from '../actions/selectionActions'
 
 const options = ['Primary', 'Secondary', 'Investment']
 
-class Occupancy extends React.Component {
+export class Occupancy extends React.Component {
   constructor(props) {
     super(props)
     this.handleChange = this.handleChange.bind(this)

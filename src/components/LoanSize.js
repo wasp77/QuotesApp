@@ -3,7 +3,7 @@ import {connect} from 'react-redux'
 import {setLoanSize} from '../actions/selectionActions'
 
 
-class LoanSize extends React.Component {
+export class LoanSize extends React.Component {
   constructor(props) {
     super(props)
     this.handleChange = this.handleChange.bind(this)
