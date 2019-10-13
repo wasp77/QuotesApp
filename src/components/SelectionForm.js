@@ -4,7 +4,7 @@ import CreditScore from './CreditScore'
 import LoanSize from './LoanSize'
 import Occupancy from './Occupancy'
 import PropertyType from './PropertyType'
-import RateButton from './RateButton'
+import {RateButton} from './RateButton'
 import {fetchQuotes} from '../actions/quoteActions'
 
 
