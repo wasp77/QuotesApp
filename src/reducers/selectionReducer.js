@@ -6,8 +6,8 @@ import {
 } from '../actions/selectionActions'
 
 const initialState = {
-  loanSize: 0,
-  creditScore: 0,
+  loanSize: '',
+  creditScore: '',
   propertyType: 'SingleFamily',
   occupancy: 'Primary',
 }

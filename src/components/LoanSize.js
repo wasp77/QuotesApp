@@ -14,11 +14,7 @@ export class LoanSize extends React.Component {
   }
 
   render() {
-    if (this.props.loanSize > 0) {
-      return <Form.Control type="number" value={this.props.loanSize} placeholder="Enter loan amount in dollars" onChange={this.handleChange} min="0.00" required/>
-    } else {
-      return <Form.Control type="number" placeholder="Enter loan amount in dollars" onChange={this.handleChange} min="0.00" required/>
-    }
+    return <Form.Control type="number" min="0.00" step="0.01" value={this.props.loanSize} placeholder="Enter loan amount" onChange={this.handleChange} required/>
   }
 }
 

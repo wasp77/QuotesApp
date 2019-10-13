@@ -15,11 +15,7 @@ export class CreditScore extends React.Component {
   }
 
   render() {
-    if (this.props.creditScore > 0) {
-      return <Form.Control placeholder="Enter credit score" type="number" value={this.props.creditScore} onChange={this.handleChange} min="300" max="800" required/>
-    } else {
-      return <Form.Control placeholder="Enter credit score" type="number" onChange={this.handleChange} min="300" max="800" required/>
-    }
+    return <Form.Control placeholder="Enter credit score" type="number" value={this.props.creditScore} onChange={this.handleChange} min="300" max="800" required/>
   }
 }
 
