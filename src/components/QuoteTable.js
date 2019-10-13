@@ -35,12 +35,24 @@ export class QuoteTable extends React.Component {
       accessor: 'apr',
       Cell: props => <div style={{textAlign: 'center'}}>{props.value.toFixed(3) + "%"}</div>
     }]
-    return <ReactTable data={data} columns={columns}   noDataText='No Quotes'/>
+
+    if (this.props.error) {
+      return <ReactTable data={data} columns={columns}   noDataText='Error!'/>
+    }
+
+    if (this.props.loading) {
+      return <ReactTable data={data} columns={columns} loading={true} noDataText='No Quotes'/>
+    }
+
+    return <ReactTable data={data} columns={columns} noDataText='No Quotes'/>
+
   }
 }
 
 const mapStateToProps = state => ({
-  quotes: state.quotes.quotesList
+  loading: state.quotes.loading,
+  quotes: state.quotes.quotesList,
+  error: state.quotes.error
 })
 
 export default connect(mapStateToProps)(QuoteTable)

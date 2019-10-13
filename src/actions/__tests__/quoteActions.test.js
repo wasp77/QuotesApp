@@ -5,7 +5,13 @@ import * as actions from '../quoteActions'
 const middlewares = [thunk]
 const mockStore = configureStore(middlewares)
 
-describe('actions', () => {
+describe('quote actions', () => {
+  it('should create an action to begin loading', () =>{
+    const expectedAction = {
+      type: actions.FETCH_QUOTES_BEGIN,
+    }
+    expect(actions.fetchQuoteBegin()).toEqual(expectedAction)
+  })
   it('should create an action to set the list of quotes', () =>{
     const quotesList = []
     const expectedAction = {
@@ -34,13 +40,15 @@ describe('async action', () => {
         occupancy: 'Primary'
       },
       quotes: {
+        loading: false,
         quotesList: [],
         error: null
       }
     })
     store.dispatch(actions.fetchQuotes()).then(() => {
       let actionList = store.getActions()
-      expect(actionList[0].type).toEqual(actions.FETCH_QUOTES_SUCCESS)
+      expect(actionList[0].type).toEqual(actions.FETCH_QUOTES_BEGIN)
+      expect(actionList[1].type).toEqual(actions.FETCH_QUOTES_SUCCESS)
     })
   })
   it('should execute fetchQuotes and fail', () => {
@@ -58,7 +66,8 @@ describe('async action', () => {
     })
     store.dispatch(actions.fetchQuotes()).then(() => {
       let actionList = store.getActions()
-      expect(actionList[0].type).toEqual(actions.FETCH_QUOTES_FAILURE)
+      expect(actionList[0].type).toEqual(actions.FETCH_QUOTES_BEGIN)
+      expect(actionList[1].type).toEqual(actions.FETCH_QUOTES_FAILURE)
     })
   })
 })

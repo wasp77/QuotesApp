@@ -1,7 +1,12 @@
 import axios from 'axios'
 
+export const FETCH_QUOTES_BEGIN = 'FETCH_QUOTES_BEGIN'
 export const FETCH_QUOTES_SUCCESS = 'FETCH_QUOTES_SUCCESS'
 export const FETCH_QUOTES_FAILURE = 'FETCH_QUOTES_FAILURE'
+
+export const fetchQuoteBegin = () => ({
+  type: FETCH_QUOTES_BEGIN
+})
 
 export const fetchQuotesSuccess = quotes => ({
   type: FETCH_QUOTES_SUCCESS,
@@ -15,6 +20,7 @@ export const fetchQuotesFailure = error => ({
 
 export function fetchQuotes() {
   return function(dispatch, getState) {
+    dispatch(fetchQuoteBegin())
     const state = getState()
     return axios({
       method: 'get',
