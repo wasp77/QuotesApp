@@ -7,7 +7,10 @@ import Col from 'react-bootstrap/Col'
 
 const containerStyle = {
   paddingTop: 50,
-  paddingBottom: 50
+  paddingBottom: 50,
+  fontFamily: 'Corben, Georgia, Times, serif',
+  boxShadow: '0 0 1em 1em #ccc'
+
 }
 
 class App extends Component {
