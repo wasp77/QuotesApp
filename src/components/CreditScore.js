@@ -1,6 +1,8 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {setCreditScore} from '../actions/selectionActions'
+import Form from 'react-bootstrap/Form'
+
 
 export class CreditScore extends React.Component {
   constructor(props) {
@@ -13,12 +15,11 @@ export class CreditScore extends React.Component {
   }
 
   render() {
-    return (
-      <div>
-        <label>Credit Score </label>
-        <input type="number" value={this.props.creditScore} onChange={this.handleChange} min="300" max="800" required/>
-      </div>
-    )
+    if (this.props.creditScore > 0) {
+      return <Form.Control placeholder="Enter credit score" type="number" value={this.props.creditScore} onChange={this.handleChange} min="300" max="800" required/>
+    } else {
+      return <Form.Control placeholder="Enter credit score" type="number" onChange={this.handleChange} min="300" max="800" required/>
+    }
   }
 }
 

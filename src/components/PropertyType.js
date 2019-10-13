@@ -1,6 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {setPropertyType} from '../actions/selectionActions'
+import Form from 'react-bootstrap/Form'
 
 const options = ['SingleFamily', 'Condo', 'Townhouse', 'MultiFamily']
 const textFriendly = ['Single Family', 'Condo', 'Townhouse', 'Multi Family']
@@ -20,12 +21,9 @@ export class PropertyType extends React.Component {
       return <option value={choice} key={index}>{textFriendly[index]}</option>
     })
     return (
-      <div>
-        <label>Property Type </label>
-        <select value={this.props.propertyType} onChange={this.handleChange}>
-          {propertyOptions}
-        </select>
-      </div>
+      <Form.Control as='select' value={this.props.propertyType} onChange={this.handleChange}>
+        {propertyOptions}
+      </Form.Control>
     )
   }
 }

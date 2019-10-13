@@ -8,33 +8,34 @@ export class QuoteTable extends React.Component {
     let data = this.props.quotes
     let columns = [{
       Header: 'Lender',
-      accessor: 'lenderName'
+      accessor: 'lenderName',
     },
     {
       Header: 'Product',
-      accessor: 'loanType'
+      accessor: 'loanType',
+      Cell: props => <div style={{textAlign: 'center'}}>{props.value}</div>
     },
     {
       Header: 'Rate',
       accessor: 'interestRate',
-      Cell: props => <span>{props.value.toFixed(3) + "%"}</span>
+      Cell: props => <div style={{textAlign: 'center'}}>{props.value.toFixed(3) + "%"}</div>
     },
     {
       Header: 'Closing Costs',
       accessor: 'closingCosts',
-      Cell: props => <span>{"$" + props.value.toFixed(2)}</span>
+      Cell: props => <div style={{textAlign: 'center'}}>{"$" + props.value.toFixed(2)}</div>
     },
     {
       Header: 'Monthly Payment',
       accessor: 'monthlyPayment',
-      Cell: props => <span>{"$" + props.value.toFixed(2)}</span>
+      Cell: props => <div style={{textAlign: 'center'}}>{"$" + props.value.toFixed(2)}</div>
     },
     {
       Header: 'APR',
       accessor: 'apr',
-      Cell: props => <span>{props.value.toFixed(3) + "%"}</span>
+      Cell: props => <div style={{textAlign: 'center'}}>{props.value.toFixed(3) + "%"}</div>
     }]
-    return <ReactTable data={data} columns={columns} />
+    return <ReactTable data={data} columns={columns}   noDataText='No Quotes'/>
   }
 }
 

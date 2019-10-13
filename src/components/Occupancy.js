@@ -1,6 +1,8 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {setOccupancy} from '../actions/selectionActions'
+import Form from 'react-bootstrap/Form'
+
 
 const options = ['Primary', 'Secondary', 'Investment']
 
@@ -19,12 +21,15 @@ export class Occupancy extends React.Component {
       return <option value={choice} key={index}>{choice + ' Residence'}</option>
     })
     return (
-      <div>
-        <label>Occupancy </label>
-        <select value={this.props.occupancy} onChange={this.handleChange}>
-          {occupancyOptions}
-        </select>
-      </div>
+      <Form.Control as='select' value={this.props.occupancy} onChange={this.handleChange}>
+        {occupancyOptions}
+      </Form.Control>
+      // <Form.Group>
+      //   <Form.Label>Occupancy </Form.Label>
+      //   <Form.Control as='select' value={this.props.occupancy} onChange={this.handleChange}>
+      //     {occupancyOptions}
+      //   </Form.Control>
+      // </Form.Group>
     )
   }
 }

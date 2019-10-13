@@ -5,6 +5,8 @@ import {Provider} from 'react-redux'
 import thunk from 'redux-thunk'
 import App from './App'
 import rootReducer from './reducers/rootReducer'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 const store = createStore(
