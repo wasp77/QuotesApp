@@ -9,11 +9,10 @@ import reducer from '../selectionReducer'
 describe('selection reducer', () => {
   it('should return initial state', () => {
     expect(reducer(undefined, {})).toEqual({
-      loanSize: 0,
-      creditScore: 0,
+      loanSize: '',
+      creditScore: '',
       propertyType: 'SingleFamily',
-      occupancy: 'Primary',
-      valid: true
+      occupancy: 'Primary'
     })
   })
   it('should set loan size', () => {

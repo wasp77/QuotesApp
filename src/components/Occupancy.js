@@ -24,12 +24,6 @@ export class Occupancy extends React.Component {
       <Form.Control as='select' value={this.props.occupancy} onChange={this.handleChange}>
         {occupancyOptions}
       </Form.Control>
-      // <Form.Group>
-      //   <Form.Label>Occupancy </Form.Label>
-      //   <Form.Control as='select' value={this.props.occupancy} onChange={this.handleChange}>
-      //     {occupancyOptions}
-      //   </Form.Control>
-      // </Form.Group>
     )
   }
 }

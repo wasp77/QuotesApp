@@ -21,12 +21,12 @@ function setup() {
 describe('loan size input', () => {
   it('should render and have set value', () => {
     const {enzymeWrapper} = setup()
-    let inputProps = enzymeWrapper.find('input').props()
+    let inputProps = enzymeWrapper.find('[type="number"]').props()
     expect(inputProps.value).toEqual(10000)
   })
   it('should call handleChange on change', () => {
     const {enzymeWrapper, mockFn} = setup()
-    let inputProps = enzymeWrapper.find('input').props()
+    let inputProps = enzymeWrapper.find('[type="number"]').props()
     inputProps.onChange()
     expect(mockFn).toHaveBeenCalledTimes(1)
   })

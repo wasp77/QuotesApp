@@ -21,12 +21,12 @@ function setup() {
 describe('property type input', () => {
   it('should render and have set value', () => {
     const {enzymeWrapper} = setup()
-    let inputProps = enzymeWrapper.find('select').props()
+    let inputProps = enzymeWrapper.find('[as="select"]').props()
     expect(inputProps.value).toEqual('SingleFamily')
   })
   it('should call handleChange on change', () => {
     const {enzymeWrapper, mockFn} = setup()
-    let inputProps = enzymeWrapper.find('select').props()
+    let inputProps = enzymeWrapper.find('[as="select"]').props()
     inputProps.onChange()
     expect(mockFn).toHaveBeenCalledTimes(1)
   })
