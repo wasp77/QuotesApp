@@ -16,7 +16,7 @@ create-react-app was used to handle the application build. It was chosen for its
 ### react-table
 This library was chosen for the table layout used for visualizing the quotes. It has many customizable features for creating a functional table and was easy to integrate into the implementation.
 ### axios
-This client was chosen for making calls to the API. It supports Promises and has broad browser support.
+This client was chosen for making calls to the API. It supports Promises and a wide range of browsers.
 ### Jest
 Jest is create-react-app's default test runner and thus was easily integrated into the application. It facilitates creating descriptive tests and provides visualization through its watcher in the command line.
 ### enzyme
