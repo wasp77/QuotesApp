@@ -3,6 +3,8 @@ import thunk from 'redux-thunk'
 import * as actions from '../quoteActions'
 
 const middlewares = [thunk]
+
+// Used to simulate the Redux store
 const mockStore = configureStore(middlewares)
 
 describe('quote actions', () => {

@@ -7,6 +7,7 @@ function setup() {
     creditScore: 700
   }
 
+  // Mock function to spy on if the handleChange function is called in the component
   let mockFn = jest.fn()
   CreditScore.prototype.handleChange = mockFn;
   const enzymeWrapper = shallow(<CreditScore {...props} />)

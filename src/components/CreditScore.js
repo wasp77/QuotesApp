@@ -3,7 +3,6 @@ import {connect} from 'react-redux'
 import {setCreditScore} from '../actions/selectionActions'
 import Form from 'react-bootstrap/Form'
 
-
 export class CreditScore extends React.Component {
   constructor(props) {
     super(props)
@@ -15,6 +14,7 @@ export class CreditScore extends React.Component {
   }
 
   render() {
+    // Min and max taken from the API requirements
     return <Form.Control placeholder="Enter credit score" type="number" value={this.props.creditScore} onChange={this.handleChange} min="300" max="800" required/>
   }
 }

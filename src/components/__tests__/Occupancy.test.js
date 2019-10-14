@@ -7,6 +7,7 @@ function setup() {
     occupancy: 'Primary'
   }
 
+  // Mock function to spy on if the handleChange function is called in the component 
   let mockFn = jest.fn()
   Occupancy.prototype.handleChange = mockFn;
   const enzymeWrapper = shallow(<Occupancy {...props} />)

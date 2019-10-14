@@ -3,7 +3,6 @@ import {connect} from 'react-redux'
 import {setOccupancy} from '../actions/selectionActions'
 import Form from 'react-bootstrap/Form'
 
-
 const options = ['Primary', 'Secondary', 'Investment']
 
 export class Occupancy extends React.Component {

@@ -4,6 +4,8 @@ import {setPropertyType} from '../actions/selectionActions'
 import Form from 'react-bootstrap/Form'
 
 const options = ['SingleFamily', 'Condo', 'Townhouse', 'MultiFamily']
+
+// Text friendly array to separate out the displayed options from the API required values
 const textFriendly = ['Single Family', 'Condo', 'Townhouse', 'Multi Family']
 
 export class PropertyType extends React.Component {

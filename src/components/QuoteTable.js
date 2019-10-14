@@ -36,10 +36,12 @@ export class QuoteTable extends React.Component {
       Cell: props => <div style={{textAlign: 'center'}}>{props.value.toFixed(3) + "%"}</div>
     }]
 
+    // If there has been an error in the API call reflect this on the table
     if (this.props.error) {
-      return <ReactTable data={data} columns={columns}   noDataText='Error!'/>
+      return <ReactTable data={data} columns={columns}  noDataText='Error!'/>
     }
 
+    // If the API call has been initiated display a loading message
     if (this.props.loading) {
       return <ReactTable data={data} columns={columns} loading={true} noDataText='No Quotes'/>
     }

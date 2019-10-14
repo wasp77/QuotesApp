@@ -14,6 +14,7 @@ export class LoanSize extends React.Component {
   }
 
   render() {
+    // Step required to allow for decimal entries
     return <Form.Control type="number" min="0.00" step="0.01" value={this.props.loanSize} placeholder="Enter loan amount" onChange={this.handleChange} required/>
   }
 }

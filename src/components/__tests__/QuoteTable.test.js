@@ -6,9 +6,7 @@ function setup() {
   const props = {
     quotes: ['this is a test value']
   }
-
   const enzymeWrapper = shallow(<QuoteTable {...props} />)
-
   return {
     props,
     enzymeWrapper

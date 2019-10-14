@@ -7,6 +7,7 @@ function setup() {
     propertyType: 'SingleFamily'
   }
 
+  // Mock function to spy on if the handleChange function is called in the component 
   let mockFn = jest.fn()
   PropertyType.prototype.handleChange = mockFn;
   const enzymeWrapper = shallow(<PropertyType {...props} />)
